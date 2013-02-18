@@ -789,10 +789,24 @@ static void __init __reserve_region_with_split(struct resource *root,
 			res->end = conflict->start - 1;
 			if (conflict->end < end) {
 				next_res = kzalloc(sizeof(*res), GFP_ATOMIC);
+<<<<<<< HEAD
+=======
+				next_res = kzalloc(sizeof(*next_res),
+						GFP_ATOMIC);
+>>>>>>> bee0ca2... Enabled usb storage
 				if (!next_res) {
 					kfree(res);
 					break;
 				}
+<<<<<<< HEAD
+=======
+				next_res->start = conflict->end + 1;
+				next_res->end = end;
+				next_res->name = name;
+				next_res->start = conflict->end + 1;
+				next_res->end = end;
+				next_res->flags = IORESOURCE_BUSY;
+>>>>>>> bee0ca2... Enabled usb storage
 				next_res->start = conflict->end + 1;
 				next_res->end = end;
 			}

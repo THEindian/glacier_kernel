@@ -2265,8 +2265,8 @@ CONFIG_USB_EHCI_MSM_72K=y
 #
 # also be needed; see USB_STORAGE Help for more info
 #
-# CONFIG_USB_STORAGE is not set
-# CONFIG_USB_UAS is not set
+CONFIG_USB_STORAGE=y
+CONFIG_USB_STORAGE_DEBUG=y
 # CONFIG_USB_LIBUSUAL is not set
 
 #
